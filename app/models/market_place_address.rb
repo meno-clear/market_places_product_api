@@ -1,0 +1,2 @@
+class MarketPlaceAddress < ApplicationRecord
+end
