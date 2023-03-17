@@ -5,7 +5,8 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     if params[:user_id].present?
-@orders = Order.where(user_id: params[:user_id]).or(Order.where(market_place_partner_id: params[:market_place_partner_id]))    else
+      @orders = Order.where(user_id: params[:user_id]).or(Order.where(market_place_partner_id: params[:market_place_partner_id]))   
+     else
       @orders = Order.all
     end
   end

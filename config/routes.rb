@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   }
 
   resource :user, only: [:show, :update]
+  patch '/carts/:id/cart_items', to: 'carts#update_cart_items', defaults: {format: :json}
+  post '/carts/:id/checkout', to: 'carts#checkout', defaults: {format: :json}
   get '/users', to: 'users#index', defaults: {format: :json}
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'

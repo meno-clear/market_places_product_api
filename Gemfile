@@ -15,6 +15,8 @@ gem 'rgeo'
 
 gem 'dotenv-rails'
 
+gem 'tty-spinner'
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
